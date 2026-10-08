@@ -1,0 +1,1 @@
+python -c "import zipfile, os; z = zipfile.ZipFile('CatTexturePack.zip', 'w', zipfile.ZIP_DEFLATED); [z.write(os.path.join(r, f), os.path.relpath(os.path.join(r, f), '.')) for root, dirs, files in os.walk('assets') for f in files]; z.write('pack.mcmeta'); z.write('pack.png'); z.close(); print('Naitabi na sa CatTexturePack.zip!')"
